@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "bun src/index.ts",
-    "dev": "tsx src/index.ts"
+    "dev": "npx tsx src/index.ts",
+    "postinstall": "npx puppeteer install"
   },
   "keywords": [],
   "author": "",
@@ -14,17 +15,19 @@
   "dependencies": {
     "@ai-sdk/openai": "^3.0.25",
     "@openrouter/ai-sdk-provider": "^2.1.1",
+    "@playwright/browser-chromium": "^1.58.1",
     "ai": "^6.0.69",
     "dotenv": "^17.2.3",
+    "playwright": "^1.58.1",
     "puppeteer": "^24.36.1",
-    "typescript": "^5.9.3",
+    "typescript": "^5",
     "zod": "^4.3.6"
   },
   "devDependencies": {
+    "@types/bun": "latest",
     "@types/node": "^25.2.0",
     "sharp": "^0.34.5",
-    "tsx": "^4.21.0",
-    "@types/bun": "latest"
+    "tsx": "^4.21.0"
   },
   "private": true,
   "peerDependencies": {
