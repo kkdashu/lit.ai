@@ -1,4 +1,4 @@
-# litai
+# sample-midscene
 
 To install dependencies:
 
@@ -9,8 +9,7 @@ bun install
 To run:
 
 ```bash
-bun run index.ts
+bun run index.js
 ```
 
 This project was created using `bun init` in bun v1.3.5. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
-# lit.ai
