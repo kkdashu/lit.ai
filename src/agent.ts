@@ -33,7 +33,7 @@ export class SimpleAgent {
     if (this.browser) await this.browser.close();
   }
 
-  async aiAct(instruction: string, options?: { maxSteps?: number, deepThink?: boolean }) {
+  async ai(instruction: string, options?: { maxSteps?: number, deepThink?: boolean }) {
     const maxSteps = options?.maxSteps ?? 15;
     const deepThink = options?.deepThink ?? true;
 
