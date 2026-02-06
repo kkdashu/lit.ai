@@ -15,7 +15,9 @@ if (require.main === module) {
     await agent.init();
 
     try {
-      await agent.aiAct('打开xiaohongshu.com，查找热门帖子，并依次点击前3篇查看详情', { deepThink: true });
+      // await agent.aiAct('打开xiaohongshu.com，查找热门帖子，并依次点击前3篇查看详情，然后往下滚动一屏，再查看最后3篇详情', { deepThink: true });
+
+      await agent.aiAct('打开baidu.com，搜索今天热门新闻, 查看2屏消息，并总结', { deepThink: true });
     } catch(e) {
       console.error(e);
     } finally {

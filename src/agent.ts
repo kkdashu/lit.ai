@@ -42,8 +42,10 @@ export class SimpleAgent {
     console.log(`🎯 Goal: ${instruction}`);
     let steps = 0;
 
+    const systemPrompt = getSystemPrompt();
+    console.log(systemPrompt);
     // Initialize History
-    const history = new ConversationHistory(getSystemPrompt());
+    const history = new ConversationHistory(systemPrompt);
 
     // Initial User Message
     history.appendUser([{
@@ -70,6 +72,8 @@ export class SimpleAgent {
         }
       }
 
+      // console.log(JSON.stringify(history.toJSON()));
+
       console.time("Plan");
       // 2. Think (Plan)
       const res = await generateText({
@@ -77,8 +81,6 @@ export class SimpleAgent {
         messages: history.messages,
       });
       console.timeEnd("Plan");
-
-      console.log('thinking: ', res.reasoningText, res.rawFinishReason, res.finishReason, res.reasoning);
 
       const rawResponse = res.text;
 
