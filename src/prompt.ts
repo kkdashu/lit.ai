@@ -1,4 +1,3 @@
-
 export const getActionDescriptionList = () => {
   const locateDesc = '{ bbox: [number, number, number, number] } // bbox: [ymin, xmin, ymax, xmax]';
 
@@ -50,8 +49,6 @@ export const getSystemPrompt = () => {
     `{
     "bbox": [120, 240, 380, 270]
   }`;
-
-  const thoughtTag = (content: string) => `<thought>${content}</thought>\n`;
 
   // Sub-goals related content - only included when includeSubGoals is true
   const step1Title = '## Step 1: Observe and Plan (related tags: <thought>, <update-plan-content>, <mark-sub-goal-done>)'

@@ -105,3 +105,7 @@ export function parseXMLPlanningResponse(xmlString: string): AIAction {
     memory
   };
 }
+
+export async function waitFor(millSeconds: number) {
+  await new Promise(r => setTimeout(r, millSeconds));
+}

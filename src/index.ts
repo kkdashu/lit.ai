@@ -15,7 +15,7 @@ if (require.main === module) {
     await agent.init();
 
     try {
-      await agent.aiAct('打开baidu.com，查找猫咪的图片，然后保存一张到本地', { deepThink: true });
+      await agent.aiAct('打开xiaohongshu.com，查找热门帖子，并依次点击前3篇查看详情', { deepThink: true });
     } catch(e) {
       console.error(e);
     } finally {
